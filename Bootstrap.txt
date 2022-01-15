@@ -1,0 +1,934 @@
+1) idea of full width:
+.container-fluid
+.container
+
+2) 
+
+
+3) responsive idea:
+Sm মানে ৫৭৬ এর চেয়ে বড় – md ৭৬৮ এর চেয়ে বড় – lg মানে ৯৯২ এর চেয়ে বড় – xl মানে ১২০০ এর চেয়ে বড় – xxl মানে ১৪০০ এর চেয়ে বড়
+
+
+4) Colors Name:
+Primary / secondary / danger / dark / light / white / success / warning / info / muted / body / transparent
+-text- ; bg- ; link- ; btn- ; table- ;
+
+5) opacity:
+opacity-0/25/50/75/100;
+- -text- ; bg- ;
+
+6) Font size increase & decrease:
+Tag:<big> little bit big;
+Class:
+lead (হালকা বড় তবে চিকন), display-4(big big size tex) (display-1 to display-6) (display-7/8 is a different style);
+	Display font size measurment: 1: 5rem (1rem = 16px), 2: 4.5rem, 3: 4rem, 4: 3.5rem, 5: 3rem, 6: 2.5rem
+fs-1/2/3/4/5/6;
+div.jumbotron (more class = “jumbotron-fluid”) [not usable in b-5]
+h1+p+p
+
+7) Text property:
+- Text-end/start /center /justify /uppercase / lowercase /capitalize; text-nowrap/wrap; (text-md-start); text-break;
+- align-baseline/top/middle/bottom; align-text-top/bottom;
+- text-decoration-none; text-decoration-underline; text-decoration-line-through;
+- fw-bold/bolder/normal/light/lighter; fst-italic/normal;
+- text- primary/ secondary/ danger/ dark/light/ white/ success/ warning/ info/muted
+- bg- primary/ secondary/ danger/ dark/light/ white/ success/ warning/ info/muted
+- text-truncate  (যদি কোন টেক্সট এক নির্ডিষ্ট উইডথ এ রাখা হয় তখন তা অট রেপ করে নিচে আসে কিন্তু যদি এটা না চাই এবং … সাইন চাই তাহলে এটা)
+- lh-1/sm/base/lg; (line-height);
+
+8) Position Property:
+Position-static / relative / absolute / fixed / sticky;
+Top/end/bottom/start-0/50/100;
+Translate-middle; (translateX(-50%) and translateY(-50%))
+Fixed-top; fixed-bottom;     fixed-md-bottom;[এটা যেকখানেই থাকুক একদম শুরুতেই উপরে বা নিচে চলে যাবে]
+Sticky-top;sticky-bottom;    sticky-md-top; [এটা যেকখানেই থাকুক item টীর উপরে আসার পরেই উপরে বা নিচে চলে যাবে]
+
+9) display & flex idea:
+- row and column
+- Display=d;
+d-inline; d-block; d-none; d-table; d-flex (d-md/xxl/xl/lg-flex); d-inline-flex ; d-grid; d-table-cell; d-table-row;
+More Classes(with flex):
+flex-row; flex-row-reverse ; flex-column ; flex-column-reverse; flex-wrap; flex-wrap-reverse;
+justify-content-start/end/center/between/around/evenly
+align-items-start/end/center/baseline/stretch
+align-slef-start/end/center/baseline/stretch (child)
+align-content-start/end/center/stretch;
+flex-fill (child); flex-grow-1/0 (child); flex-shrink-0/1(child);
+D-flex এর পরিবর্তেঃ wrapper div কে hstack gap-3 অথবা vstack gap-3 দিয়েও করা যায়।
+
+10) Border Property:
+Border; border-top/end/bottom/start; border-0; border-top/end/bottom/start-0;
+border-Primary / secondary / danger / dark / light / white / success / warning / info / muted / body / transparent;
+Border-1/2/3/4/5;
+Border-radius: rounded / rounded-top/end / bottom/start / circle / pill / rounded-0/1/2/3;
+More info: just menu making border –right / left …..
+
+
+11) verticle rule:
+<div class="vr"></div>
+
+12) Iframe Property:
+In Iframe wrapper div: <div class="ratio ratio-1x1">
+More Ratrio:
+ratio-4x3; ratio-16x9; ratio-21x9; 
+
+
+
+
+
+Components:
+
+1) blockquote:
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+
+2) Figure:
+<figure class="figure">
+	<img src="assets/img/jewel.png" class="figure-img img-fluid rounded" alt="...">
+	<figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
+
+3) collapse:
+
+- Button & paragraph:
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#aaa">Button</button>
+<p class="collapse show" id="aaa"> Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger. </p>
+NB: - on behalf of button you can use a tag but data-bs-target must be changed as href.
+P show class means first paragraph show.
+In collapse class you can use more: collapse-horizontal (means horizontally)
+
+- Collapes Group: Horizontal
+
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo">Click Me!</button>	
+<a class="btn btn-danger" data-bs-toggle="collapse" href="#demo1">Click Me!</a>	
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo2">Click Me!</button>
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo3">Click Me!</button>	
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo4">Click Me!</button>	
+
+<p class="collapse" id="demo">Ibrahim</p> 
+<p class="collapse" id="demo1">Ibrahim</p> 
+<p class="collapse" id="demo2">Ibrahim</p>
+<p class="collapse" id="demo3">Ibrahim</p>
+<p class="collapse" id="demo4">Ibrahim</p>
+
+
+- Collapes Group: Vertically
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo">Click Me!</button>
+<p class="collapse" id="demo">Ibrahim</p> <br><br>
+	
+<a class="btn btn-danger" data-bs-toggle="collapse" href="#demo1">Click Me!</a>
+<p class="collapse" id="demo1">Ibrahim</p>  <br><br>
+	
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo2">Click Me!</button>
+<p class="collapse" id="demo2">Ibrahim</p> <br><br>
+
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo3">Click Me!</button>
+<p class="collapse" id="demo3">Ibrahim</p> <br><br>
+	
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo4">Click Me!</button>	
+<p class="collapse" id="demo4">Ibrahim</p> <br><br>
+NB:Br tag technique.
+একটি বাটোনে ক্লিক করলে যাতে দুটি p মানে অন্যদুটী বাটনের দুটি p একসাথে ওপ্নে হয় সেজন্য, data-bs-target=“.class” যা কিনা অন্য p collapse class এর সাথে লিখতে হবে।যেমনঃ
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#demo">Click Me!</button>
+<a class="btn btn-danger" data-bs-toggle="collapse" href="#demo1">Click Me!</a>
+<button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target=".mix">Mix Me!</button>
+<p class="collapse mix" id="demo">Ibrahim</p>
+<p class="collapse mix" id="demo1">Ibrahim</p> 
+
+
+4) Accordian:
+
+<div class="accordion">
+<div class="accordion-item">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#xyz">Accordion Header 1</button>
+<div class="collapse show" id="xyz">Accordian Body</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#xyz2">Accordion Header 2</button>
+<div class="collapse" id="xyz2">Accordian Body 2</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#xyz3">Accordion Header 3</button>
+<div class="collapse" id="xyz3">Accordian Body 3</div>
+</div>
+</div>
+NB:
+accordian - accordian item > accordian-header (button)+ accordian-body(paragraph)
+accordian-button means full screen button
+show means first time show.
+collapsed - with accordian button - first hide then click show and also highile off. withuot collapsed hightlight on.
+
+5) Alert:
+
+Simple:
+<div class="alert alert-warning alert-dismissible fade show">Click here
+<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+NB:
+1) alert alert-danger desgine
+2) in button or a tag: class btn-close for cross sgine and data-bs-dismiss for working dismiss. Can use btn-close-white for coloring.
+3) alert-dismissable fade show for cross naimation
+Advance :
+<div class="alert alert-success alert-dismissible fade show">
+<h4 class="alert-heading">Well done!</h4>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>
+<span>You acre success</span>
+<a href="#" class="alert-link btn-close" data-bs-dismiss="alert"></a>
+</div>
+NB:
+1) alert-heading for taking heading in alert box
+2) svg for taking icon of alert
+3) alert-link just a tag desgine.
+NB: for close icon in button class: btn-close btn-close-whit
+
+6) Badges:
+<button class="btn btn-danger position-relative">
+	Facebook Like<span class="badge bg-secondary translate-middle rounded-pill position-absolute top-0 start-90">200+</span>
+</button>
+Styling class:
+- Badge-pill(for rounded badge);
+- rounded-pill (for more rounded more badge);
+- rounded-circle (for fully rounded bagde);
+- bg-primary for badge bg color
+- text-danger for badge text color
+- position-relative and position-absoulte for moving badge
+- translate-middle for acuriting place of position.
+
+
+7) Spinners:
+<div class="spinner-border"></div>
+<div class="spinner-grow"></div>
+
+NB:
+For coloring: text-primary/danger/success etc….
+More class: spinner-border-sm; spinner-grow-sm (or styling with css )
+With text but hidden:
+<div class="spinner-border text-danger">
+<span class="visually-hidden">Loading...</span> [in bootstrap 4 – sr-only class working for hidden text]
+</div>
+Animate spinners link: https://github.com/joaopereirawd/fakeLoader.js
+
+
+8) Button আনার কয়েকটি উপায়ঃ
+<button class="btn btn-success">Click Here</button>
+<a href="#" class="btn btn-danger">Click Here</a>
+<input type="button" value="clikc me" class="btn btn-danger"/>
+<input type="submit" class="btn btn-danger"/>
+<input type="reset" class="btn btn-danger"/>
+
+<span class="btn btn-danger">Click here</span>
+<!-- [এটাতে বাটনের সঠিক ইফেক্ট আসবে না] -->
+<p class="btn btn-danger">hi buddy</p>
+<!-- [এটাতে বাটনের সঠিক ইফেক্ট আসবে না] -->
+<div class="btn btn-danger">Click me</div>
+<!-- [এটাতে বাটনের সঠিক ইফেক্ট আসবে না] -->
+
+NB:
+শুধু মাত্র btn / btn-danger ইউজ করা যায় যার জন্য রয়েছে প্রত্যাক্টি আলদা আলাদা ইফেক্ট। এখানে css এর পাশা পাশি jquery ইফেক্ট ও আছে।
+More class for styling :  btn, btn-danger(filled btn), btn-sm/lg, btn-link, btn-block; active; disabled (এটা ক্লাস না blank attribute); btn-outline-danger(unfilled btn but without btn-danger)
+color name for btn-color and btn-outline-color : Primary / secondary / danger / dark / light / white / success / warning / info / muted / link;
+For full screen/ block-level button : d-grid (but in wrapper div); gap-2 (for button gap); col-6 (for width of a button); mx-auto (for moving left-right auto);
+For moving button right portion with d-flex: d-flex (but wrapper div) ; justify-content-end (for moving button end);
+
+8-ii) Button group:
+btn-group btn-group-vertical btn-toolbar:
+<div class="btn-group btn-group-lg btn-group-vertical ">
+<button class="btn btn-danger">aaa</button>      <button class="btn btn-danger">bbb</button>   <button class="btn btn-danger">ccc</button>
+</div>
+NB: - all button in wrapper div with class btn-group
+- btn-group-lg; btn-group-sm
+- for vertically desgine: btn-group-vertical
+if you want to select all button at a time like checkbox :
+<div class="btn-group">
+<input type="checkbox" class="btn-check" id="btncheck1">
+<label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+<input type="checkbox" class="btn-check" id="btncheck2">
+<label class="btn btn-outline-primary" for="btncheck2">Checkbox 1</label>
+</div>
+button toolbar : all btn-group must be in wrapper div with class="btn-toolbar“ (work with some btn-group)
+
+8-iii) Button Menu:
+btn-group btn-group-vertical btn-toolbar:
+<div class="btn-group">
+<button class="btn btn-primary">1</button>   <button class="btn btn-primary">2</button>
+	<div class="btn-group">
+<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>
+	<ul class="dropdown-menu">
+	<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+	<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+	</ul>
+	</div>
+<button class="btn btn-primary">3</button>  <button class="btn btn-primary">4</button>
+</div>
+NB:
+In btn-group you can use more: dropend; dropstart; dropup; dropdown; (for dropdown signe ups and downs)
+click here লেখাটা না দিলে এখানে শুধু টগল চিনহ আসবে তবে এখানে খালি না রেখে <span class="caret"></span> লেখা উত্তম কারন এটা SEO তে কারর্যকরী।
+Dropwon-toggle for dropdown signe;  data-bs-toggle is main task.
+In dropdown-menu you can use: dropdown-menu-dark; dropdown-menu-end; dropdown-menu-lg-end;
+In dropdownl list making divider: <li><hr class="dropdown-divider"></li>
+On dropdown-item: <li><span class="dropdown-item-text">Dropdown item text</span></li>
+
+
+9) Card:
+<div class="card">
+<div class="card-header">Hi Ibrahim Khalil Jewel Card Header</div>
+<div class="card-body">
+<div class="card-title">Ibrahim Card Title</div>
+<div class="card-text"> Ibrahim Khalil Jewel Rana Card Text.....</div>
+<a href="#" class="card-link">Card Link</a>
+</div>
+<div class="card-footer">Hi this is card footer</div>
+</div>
+NB:
+-div.card
+	o div.card-header>h3
+	o div.card-body
+		- div.card-title(h3)
+		- card-subtitle
+		- div.card-text(p)
+		- a.card-link
+	o div.card-footer>p
+for full card disabled: in card class: .stretched-link
+
+9-ii) Card:
+<div class="card" style="width:500px; height:auto;">
+<img src="assets/img/jewel.png" alt="jewle image" class="card-img-top card-img-bottom max-width">
+<div class="card-body">
+<div class="card-title">Ibraim Card Title</div>
+<div class="card-text">MD Ibrahim Khalil Jewel Rana Card Text......</div>
+<a href="#" class="card-link">Card Link</a>
+</div>
+<div class="card-footer">Ibrahim Khalil Jewel Card Footer</div>
+</div>
+NB:
+-div.card (style: width, height)
+	o img.card-img-top.card-img-bottom (for image radius rounded and overflow:hidden) (on behalf of card-header)
+	o div.card-body .card-img-overlay ( for full background image overlay)
+		o div.card-title
+		o card-subtitle
+		o div.card-text
+		o a.card-link
+	o div.card-footer>p
+- Image left and content right – for this – row comun use.
+
+10) Progress bar desgine:
+<div class="progress" style="height:20px">
+<div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:25%">25%</div>
+</div>
+NB:
+- styling class:
+In progress: style=”height:20px” width=“80%”;
+In progress-bar: bg-info; progress-bar-striped; progress-bar-animated; style=”width:25%” (class w-25)
+Progress-bar advance:
+<div class="progress" style="height:20px">
+<div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:25%">25%</div>
+<div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:25%">25%</div>
+<div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:25%">25%</div>
+<div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:25%">25%</div>
+</div>
+- একিই সাথে একটি progress এ কয়েকটি progress-bar দেখাতে চাইলে শুদধু progress-bar ডিভ টা কপি পেস্ত কোরলেই হবে
+
+
+11) Placeholder effects:
+<p class="placeholder-glow">
+<span class="placeholder">Hi Ibrahim</span>
+</p>
+NB:
+- এটা তেমন কিছু না জাস্ট কোন লেখার ক্লাস placeholder দিলে লেখাটা একটি বক্স এর ভিতর ঢুকে যায় যার কারনে লেখা টা দেখা যায় না। আর একটি পেরেন্ট ডিভ কে placeholder-glow দিলে পুরো বক্স ক্লার এনিমাশন দেখাবে।
+
+12) Tooltip:
+<span title="slap <b>means</b> thappor" data-bs-toggle="tooltip" data-bs-html="true" data-bs-trigger="click hover" data-bs-placement="right">
+I want to slap you heardly infornt your hubby.
+</span>
+For tooltip support perfectly use some javascript code but last of bootsrap and cdn calling.
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})   </script>
+NB:
+This is title modificatin part.
+data-bs-toggle means task of tooltip and it is function.
+Data-bs-html means in title html effects
+Data-bs-trigger means title sow in click or hover.
+Data-bs-placement means title show in left / right / top / bottom.
+span/p/button/a all can use for tooltip
+
+
+13) Popovers:
+<span title="slap <b>means</b> thappor" data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="click hover" data-bs-placement="right" data-bs-content="And here's some amazing content. It's very engaging. Right?">
+I want to slap you heardly infornt your hubby.
+</span>
+For popovers support perfectly use some javascript code but last of bootsrap and cdn calling.
+<script>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})   </script>
+NB:
+This is title modificatin part.
+data-bs-toggle means task of popovers and it is function.
+Data-bs-html means in title html effects
+Data-bs-trigger means title sow in click or hover.
+Data-bs-placement means title show in left / right / top / bottom.
+span/p/button/a all can use for tooltip
+
+14) Modal:
+<!-- Button trigger modal -->
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">click</button>
+
+<!-- Modal -->
+<div class="modal fade" id="mymodal" data-bs-backdrop="static">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header"><h5 class="modal-title">Modal header title</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+
+<div class="modal-body">This is modal body...........</div>
+<div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close or &times;</button></div>
+</div>	</div>	</div>
+NB:
+sequence:
+- Button Trigger modal: use this two attribute
+data-bs-toggle="modal" and data-bs-target="#mymodal" with button
+- For modal:
+- .modal and #mymodal div
+	- modal-dialog
+		- modal-content
+			- modal-header > modal-title
+			- modal-body
+			- modal-footer
+extra class:
+- in modal class: fade (for fad animation)
+- in modal class for Static backdrop use attribute: data-bs-backdrop="static"
+(not close the modal if user click somewhere in browser must clik in close option) 
+-in modal-dialog class:
+modal-dialog-centered (Vertically centered);
+modal-dialog-scrollable (Scrolling long content);
+modal-sm (small modal); modal-lg (large modal); modal-xl (extra large modal);
+modal-fullscreen; modal-fullscreen-sm-down (for small device modal will be full screen); modal-fullscreen-md-down; modal-fullscreen-lg-down; modal-fullscreen-xl-down; modal-fullscreen-xxl-down;
+For closing button in button attribute: data-bs-dismiss="modal"  ( &times; for cross signe write in betweem button tag)
+NB: for close icon in button class: btn-close btn-close-whit
+
+14-ii) Modal:
+<!-- Button trigger modal -->
+<button class="btn btn-danger" data-bs-toggle="modal" and data-bs-target="#mymodal">Click me !</button>
+<!-- Modal -->
+<div class="modal fade" id="mymodal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title">Modal - 1: This is modal header title text</div>
+			</div>
+			<div class="modal-body">Modal - 1: This is modal body text...</div>
+			<div class="modal-footer">
+			Modal - 1: This is modal footer
+			<button class="btn btn-danger" data-bs-toggle="modal" and data-bs-target="#mymodal2">2nd Modal</button>
+			<button class="btn btn-danger" data-bs-dismiss="modal">&times;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 2nd modal -->
+<div class="modal fade" id="mymodal2">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title">Modal - 2: This is modal header title text</div>
+			</div>
+			<div class="modal-body">Modal - 2: This is modal body text...</div>
+			<div class="modal-footer">
+			Modal - 2: This is modal footer
+			<button class="btn btn-danger" data-bs-toggle="modal" and data-bs-target="#mymodal">1st Modal</button>
+			<button class="btn btn-danger" data-bs-dismiss="modal">&times;</button>
+			</div>
+		</div>
+	</div>
+</div>
+NB: for close icon in button class: btn-close btn-close-whit
+- Animate modal link: 
+https://joaopereirawd.github.io/animatedModal.js/?fbclid=IwAR1pCfGK0BIUCY8GFlK6BfzUrKYagCeyM_jikJnc6nOEcNLrAYBlLGHbm0o
+
+15) Offcanvus:
+<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample">Link with href</a>
+
+<div class="offcanvas offcanvas-start" id="offcanvasExample">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+<button class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
+</div>  </div>
+NB:
+<!-- in button : data-bs-toggle="offcanvas" 
+more class:: offcanvas-start/end/top(like modal)/bottom(modal) 
+body scrolling and backdrop....
+data-bs-scroll="true" -  for scrolling document. with background blure.
+data-bs-backdrop="false" - background not blure
+show - dile first ei show korbe content gula...
+
+16) Toasts:
+<button class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+<div class="toast" id="liveToast">
+<div class="toast-header">
+<img src="" alt="...">
+<button class="btn-close ms-auto" data-bs-dismiss="toast"></button>
+</div>
+<div class="toast-body">Hello, world! This is a toast message.</div>
+</div> </div>
+Script:
+var toastTrigger = document.getElementById('liveToastBtn')
+var toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+toastTrigger.addEventListener('click', function () {
+var toast = new bootstrap.Toast(toastLiveExample)
+toast.show()     })     }
+
+
+17) Carousel:
+<div class="carousel slide" data-bs-ride="carousel" id="slider" style="width:700px;">
+	<div class="carousel-inner">
+		<div class="carousel-item active" >
+			<img src="assets/img/jewel.png" alt="" class="img-fluid w-100" />
+			<div class="carousel-caption">
+				<h2>I am Ibrahim Khalil Jewel</h2>
+				<p>Hi baby how are you?</p>
+				<button type="button" class="btn btn-danger" > click here </button>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="assets/img/aaa.jpg" alt="" class="img-fluid" />
+		</div>
+		<div class="carousel-item">
+			<img src="assets/img/bbb.jpg" alt="" class="img-fluid" />
+		</div>
+		<div class="carousel-item">
+			<img src="assets/img/ccc.jpg" alt="" class="img-fluid" />
+		</div>
+		<div class="carousel-item">
+			<img src="assets/img/ddd.jpg" alt="" class="img-fluid" />
+		</div>
+		<div class="carousel-item">
+			<img src="assets/img/eee.jpg" alt="" class="img-fluid" />
+		</div>
+		<div class="carousel-item">
+			<img src="assets/img/fff.jpg" alt="" class="img-fluid" />
+			<div class="carousel-caption">
+				<h2>I am Ibrahim Khalil Jewel</h2>
+				<p>Hi baby how are you?</p>
+				<button type="button" class="btn btn-danger" > click here </button>
+			</div>
+		</div>
+	</div>
+	<a href="#slider" class="carousel-control-prev" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+		<span class="visually-hidden">Previous</span>
+	</a>
+	<a href="#slider" class="carousel-control-next" data-bs-slide="next">
+		<span class="carousel-control-next-icon"></span>
+		<span class="visually-hidden">Next</span>
+	</a>
+	<ul class="carousel-indicators">
+		<li data-bs-target="#slider" data-bs-slide-to="0" class="active" ></li>
+		<li data-bs-target="#slider" data-bs-slide-to="1" ></li>
+		<li data-bs-target="#slider" data-bs-slide-to="2" ></li>
+		<li data-bs-target="#slider" data-bs-slide-to="3" ></li>
+		<li data-bs-target="#slider" data-bs-slide-to="4" ></li>
+		<li data-bs-target="#slider" data-bs-slide-to="5" ></li>
+		<li data-bs-target="#slider" data-bs-slide-to="6" ></li>
+	</ul>
+</div>
+
+NB:
+Carousel / slider making:
+Carousel has 3 part:
+1) carousel inner (carousel-item(img.img-fluid) & carousel caption)
+2) carousel control [prev & next]
+3) carousel indicators (... _ _ _)
+1st carousel inner part:
+	div.carousel>div.carousel-inner>div.carousel-item*6>img.img-fluid
+	In carousel div – data-bs-ride="carousel"
+	In carousel-item div(any but first) - active class
+---------------sliding start--------------------
+	In carousel div - class slide (for slide effect); carousel-fade; carousel-dark / light;
+	[if need style width height] [slider width = img width]
+	For carousel caption:
+	after image: div.carousel-caption>h2/p/button
+2nd carousel control part start:
+	a.carousel-control-prev>span.carousel-control-prev-icon
+	[just use inline element like a/span]
+	In carousel div make a id like #slider and in a href link them. If button then data-bs-target on behalf of href
+	In a make a attribute like data-bs-slide="prev"
+---------------------same as next control button----------
+3rd carousel indicators part start:
+	ul.carousel-indicators>li
+	In li use data-bs-target="#slider" data-bs-slide-to="0" [1st img=0; 2nd img =1;....]
+	li numbers depend on images....
+	1st li class="active" bcz 1st carousel-item is active (do ro not)
+Extra Ordinary part:
+indicatores change desgine: inspect element
+- .carousel-indicators li{width/height/border-radius/background-color}
+-Javascript change:
+var myCarousel = document.querySelector('#slider')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  [carousel-item attribute- data-bs-interval="10000"; timing set]
+  pause: false/hover,
+  [এটা দিলে পস হবে কিনা তাই বুঝায় "hover" ইনভার্টেড কমার মধ্যে দিতে হবে নইলে কাজ করবে না]
+  wrap: false,
+  [false মানে স্লাইড শেষ ছবি আসার পর বন্ধ হয়ে যাবে তবে true দিলে বার বার হতেই থাকবে]
+  touch:true,
+  [carousel-item attribute: data-bs-touch="false"]
+  direction: right,     keyboard:true
+})
+
+18-i) List:
+<ul class="list-inline">
+<li class="list-inline-item">aa</li>
+<li class="list-inline-item">bb</li>
+<li class="list-inline-item">cc</li></ul>
+
+NB: list-unstyled;
+
+18-ii) List Group:
+<ul class="list-group list-group-horizontal-lg">
+<li class="list-group-item list-group-item-action">MD</li>
+<li class="list-group-item">MD Ibrahim</li>
+<li class="list-group-item">MD Ibrahim KHalil </li>
+<li class="list-group-item list-group-item-action">MD Ibrahim KHalil Jewel</li>
+<li class="list-group-item">MD Ibrahim KHalil Jewel Rana</li>
+</ul>
+NB:
+Styling class:
+in ul: list-group; list-group-flush (for removing unneccesary border); list-group-numbered; list-group-horizontal;
+in li: list-group-item; list-group-item-action (for hover effect); list-group-item-primary/danger/colorsName; active; disabled;
+
+
+19) Breadcrumb:
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="#">Home</a></li>
+<li class="breadcrumb-item"><a href="#">About</a></li>
+<li class="breadcrumb-item"><a href="#">Contact me</a></li>
+<li class="breadcrumb-item"><a href="#">Address</a></li>
+</ul>
+NB:
+- styling class: active;
+- in css you can style breadcrumb without breadcrumb: --bs-breadcrumb-divider: '';
+- in css you can change breadcrumb signe: --bs-breadcrumb-divider: '>';
+- in css you can change more breadcrumb signe with svg formate:
+--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);
+
+
+20) Pagination:
+<ul class="pagination justify-content-center">
+<li class="page-item active"><a href="#" class="page-link">Previous</a></li>
+<li class="page-item"><a href="#" class="page-link">1</a></li>
+<li class="page-item"><a href="#" class="page-link">2</a></li>
+<li class="page-item disabled"><a href="#" class="page-link">3</a></li>
+<li class="page-item"><a href="#" class="page-link">4</a></li>
+<li class="page-item"><a href="#" class="page-link">Next</a></li>
+</ul>
+NB:
+- styling class:
+in ul: pagination-lg; pagination-sm; justify-content-center/start/end;
+In li: active; disabled;
+button এ disabled নামে blank attribute আছে কিন্তু pagination এ নাই তাই ক্লাস দিতে হবে.
+
+
+
+21-i) Navigation Process:
+
+নেভিগেশন তৈরীর দুটি উপায় রয়েছে এই বুটস্ট্রাপেঃ
+১) ul li a  [dropdown menu must need]
+<ul class="nav">
+	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+</ul> 
+২) nav a  / div a [drop down menu not recomended]
+<nav class="nav">
+	<a href="#" class="nav-item nav-link active">Home</a>
+	<a href="#" class="nav-item nav-link">Menu 1</a>
+	<a href="#" class="nav-item nav-link">Menu 1</a>
+	<a href="#" class="nav-item nav-link">Menu 1</a>
+	<a href="#" class="nav-item nav-link">Contact Us</a>
+</nav> 
+NB:
+এইখানে nav-item না দিলেও হয়
+[তবে button সহ অন্যান্য পধ্বতিও আছে]
+NB:
+More class :
+nav class = nav-tabs ; nav-pills(with active) ; nav-fill (full screen); nav-jutified (full width of a content if need take two line) ; justify-content-center (horizontally); justify-content-end (horizontally);   flex-column (vertically); flex-md-row ; bg-success ; 
+li / a class = active ; disabled ; text-danger/all-color ; 
+
+
+21-ii) Navigation - dropdown
+<ul class="nav nav-tabs">
+	<li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item dropdown ">
+		<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+		<ul class="dropdown-menu">
+			<li><a href="#" class="dropdown-item">dropdown item</a></li>
+			<li><a href="#" class="dropdown-item">dropdown item</a></li>
+			<li><a href="#" class="dropdown-item">dropdown item</a></li>
+			 <li><hr class="dropdown-divider"></li>
+			<li><a href="#" class="dropdown-item">dropdown item</a></li>
+		</ul>
+	</li>
+	<li class="nav-item"><a href="#" class="nav-link">Menu 1</a></li>
+	<li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+</ul> 
+NB:
+in li class: dropdown;
+in a class: dropdown-toggle; attribute - data-bs-toggle="dropdown";
+2nd ul : dropdown-menu;
+2nd a : dropdown-item;
+<li><hr class="dropdown-divider"></li> - dropdown list divider.
+
+
+21-iii) nav bar:
+
+<nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+	<a href="#" class="navbar-brand">Jewel's Care</a>
+	<!-- Responsive menu -->
+	<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#smallMenu"><span class="navbar-toggler-icon"></span></button>
+
+<div class="collapse navbar-collapse" id="smallMenu">
+	<ul class="navbar-nav">
+		<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+		<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallary</a>
+			<ul class="dropdown-menu">
+				<li class="dropdown-item"><a href="#">aaa</a></li>
+				<li class="dropdown-item"><a href="#">bbb</a></li>
+				<li class="dropdown-item"><a href="#">ccc</a></li>
+			</ul>
+		</li>
+		<li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+	</ul>
+	<form action="#" class="form-inline d-flex"> [form-inline text & box inline]
+		<input type="search" name="search" class="form-control" />
+		<button class="btn btn-dark">Search</button>
+	</form>
+
+</div>
+<span class="navbar-text">hi baby</span>
+</nav>
+
+NB:
+
+NB:
+wrapper div / nav class: navbar; bg-dark navbar-dark; navbar-expand (verticle to horizontal) use more: navbar-expand-md; 
+ul class: navbar-nav
+li: nav-item ; for dropdown (.dropdown);
+a: nav-link for dropdown (.dropdown-toggle; data-bs-toggle="dropdown")
+	- ul: dropdown-menu
+	- li: dropdown-item
+- before ul li you can use navbar-brand; and after ul li you can use navbar-text.
+	- <a href="#" class="navbar-brand">Jewel's Care</a> [brand name or logo] [d-none d-md-inline-block]
+	- <span class="navbar-text">hi baby</span>  [brand text] [d-none d-xl-inline-block]
+For responsive menu before ul.navbar-nav:
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+	<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+ul li কে div দিয়ে রেপ করতে হবে। এবং বাহিরে button নিতে হবে।div.collapse.navbar-collapse#xx . button.navbar-toggler data-bs-target=”#xx”  data-bs-toggle=”collapse”. Navbar-expand-md must needed.
+Last of ul li:
+<form action="#" class="form-inline d-flex"> [form-inline text & box inline]
+<input type="search" name="search" class="form-control" />
+<button class="btn btn-dark">Search</button>
+</form>
+More:
+- Navbar Fixed or sticky	Nav.fixed-top/bottom; sticky-top/bottom
+Difference between nav & navbar
+Navigation: default horizontal
+ul>li>a method: ul.nav           li.nav-item         a.nav-link
+nav>a method: div.nav            a.nav-item.nav-link
+Navigation bar:  default vertical
+ul>li>a method: nav.navbar   ul.navbar-nav  (navbar-nav-scroll)          li.nav-item         a.nav-link
+nav>a method: nav.navbar  div.navbar-nav    a.nav-item.nav-link
+
+
+
+
+22) Nav Tabs:
+<!-- nav nav-tabs nav-item nav-link -->
+<ul class="nav nav-tabs">
+
+	<li class="nav-item">
+		<a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home">Home</a>
+	</li>
+
+	<li class="nav-item">
+		<a class="nav-link" data-bs-toggle="tab" data-bs-target="#profile">Profile</a>
+	</li>
+
+	<li class="nav-item">
+		<a class="nav-link" data-bs-toggle="tab" data-bs-target="#contact">Contact</a>
+	</li>
+
+</ul>
+
+<!-- nav এর tab-content tab pane -->
+<div class="tab-content">
+	<div class="tab-pane fade show active" id="home">Home tab details</div>
+	<div class="tab-pane fade" id="profile">Profile tab details</div>
+	<div class="tab-pane fade" id="contact">Contact tab details</div>
+</div>
+NB:
+ul li a (button for click trigger)
+In ul : nav-pills (without nav-tabs);
+For verticle nav tabs making:
+Ul class: flex-column
+And must wrapper div.d-flex.
+
+22-ii) Nav Tabs Animation:
+
+isotop:
+1) isotope.metafizzy.co
+2) pckg.min download and call in html file
+3) 1st task: next - filtering - ui - html block(data-filter) copy and paste
+- wrapper div class name (like isotope_tab), data-filter attribute(like: data-filter="*") are the main part:
+- you can edite this filter attribute value but with . signe
+4) 2nd task : go to function - ui - .grid .element-item html block.
+- edite wrapper div with isotope_element
+- and child class just data-filter value but not with . signe.
+
+5) 3rd task: In this grid element-item section go below:
+In the JS, we can use that filter when a button is clicked.
+
+inside this copy paste into our javascript file:
+but rename: .grid change to .isotope_element and .filter-button-group change to .isotope_tab
+
+Example:
+
+ <div class="isotope_tab">
+      <button data-filter="*">show all</button>       <button data-filter=".one">One</button>       <button data-filter=".two">Two</button>       <button data-filter=".three, .four">three & four</button>       <button data-filter=":not(.three)">No three</button>       <button data-filter=".two:not(.three)">two not three</button>
+   </div>
+
+    <div class="isotope_element">
+      <div class="one two"><p>AAA</p></div>       <div class="two three"><p>BBB</p></div>       <div class="four"><p>CCC</p></div>       <div class="one"><p>DDD</p></div>
+    </div>
+
+<!-- isotop.js down file call -->
+    <script src="assets/js/isotope.js"></script>
+<script>
+      // init Isotope
+      var $grid = $(".isotope_element").isotope({
+        // options
+      });
+      // filter items on button click
+      $(".isotope_tab").on("click", "button", function () {
+        var filterValue = $(this).attr("data-filter");
+        $grid.isotope({ filter: filterValue });
+      });
+    </script>
+
+23)  scroll_spy:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  body {
+      position: relative; 
+  }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">Section 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Section 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Section 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+  <h1>Section 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+<div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <h1>Section 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+<div id="section3" class="container-fluid bg-secondary text-white" style="padding:100px 20px;">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+</body>
+</html>
+
+
+
+24) Table:
+
+Simply take table > tr/th > td
+<table class="table">
+<thead> <tr> <th></th> </tr> </thead>
+<tbody> <tr> <td></td> </tr> </tbody>
+<tfoot> <tr> <th></th> </tr> </tfoot>
+</table>
+In Table class:
+.table (border-bottom, cell-spacing, cell-padding)
+table-bordered (around border)
+border-primary/ secondary / danger / dark / light / white / success / warning / info / muted
+table-borderless (no border)
+table-striped (even - odd color maching)
+table-sm (for small size table)
+table-dark (dark matching color); Primary / secondary / danger / dark / light / white / success / warning / info / muted
+table-hover (for full table hover effect)
+align-middle (for all td text align)
+In table wrapping div class:
+Table-responsive (for taking horizontal rule); table-responsive-sm
+In tr/td/th class:
+tr/td/th:  table-danger/warning/success ; colspan="2“; rowspan=“2”; table-active;
+
+
+
+
+
+25) next form er kissa kahini:
+
+
+
+
+
+
+
